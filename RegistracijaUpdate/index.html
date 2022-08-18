@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <title>Registracija</title>
+  <link rel="stylesheet" href="./main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
+</head>
+<body>
+  <div class="form__container">
+    <form name="form1" class="form" id="registracija">
+      <h1 class="form__title">REGISTRACIJA</h1>
+      <div class="container__imeIPrezime">
+        <div class="form__input-group" id="Ime">
+          <input id="inputIme" name="Ime" type="text" class="form__input" required/>
+          <label for="inputIme" id="labelIme" class="labelEmpty">Ime*</label>
+        </div>
+        <div class="form__input-group" id="Prezime">
+          <input
+            id="inputPrezime"
+            name="Prezime"
+            type="text"
+            class="form__input"
+          />
+          <label for="inputPrezime" id="labelPrezime" class="labelEmpty"
+            >Prezime</label
+          >
+        </div>
+      </div>
+      <div class="form__input-group" id="Telefon">
+        <input
+          id="inputTelefon"
+          name="Telefon"
+          type="text"
+          class="form__input"
+          required
+          minlength="10"
+        />
+        <label for="inputTelefon" id="labelTelefon" class="labelEmpty"
+          >Telefon</label
+        >
+        <div id="errorMessageTelefon" class="form__input-error-message2">
+            Broj telefona mora imati barem 10 znakova!
+          </div>
+      </div>
+      <div class="form__input-group" id="Email">
+        <input id="inputEmail" name="Email" type="email" class="form__input" required/>
+        <label for="inputEmail" id="labelEmail" class="labelEmpty"
+          >E-mail*</label
+        >
+        <div id="errorMessageEmail" class="form__input-error-message2">
+            E-mail je u neispravnom formatu!
+          </div>
+      </div>
+      
+      <div class="form__input-group" id="Lozinka">
+        <input
+          id="inputLozinka"
+          name="Lozinka"
+          type="password"
+          class="form__input"
+          required
+          minlength="6"
+          maxlength="9"
+        />
+        <label for="inputLozinka" id="labelLozinka" class="labelEmpty"
+          >Lozinka*</label
+        >
+        <svg
+          id="passwordEye1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          class="bi bi-eye"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+          />
+          <path
+            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+          />
+        </svg>
+        <div id="errorMessageLozinka" class="form__input-error-message2">
+            Lozinka mora sadržavati između 6 i 9 znakova!
+          </div>
+      </div>
+      
+      <div class="form__input-group" id="PotvrdaLozinke">
+        <input
+          id="inputPotvrdaLozinke"
+          name="PotvrdaLozinke"
+          type="password"
+          class="form__input"
+          required
+        />
+        <label
+          for="inputPotvrdaLozinke"
+          id="labelPotvrdaLozinke"
+          class="labelEmpty"
+          >Potvrdite Lozinku*</label
+        >
+        <svg
+          id="passwordEye2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          class="bi bi-eye"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+          />
+          <path
+            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+          />
+        </svg>
+        <div id="errorMessagePassMatch" class="form__input-error-message2">
+            Lozinka i njena potvrda se moraju podudrati!
+          </div>
+      </div>
+
+      <div id="errorMessageAllFields" class="form__input-error-message2">
+        Sva polja s oznakom * moraju biti popunjena!
+      </div>
+      <div id="errorMessageCheckbox" class="form__input-error-message">
+        Polje prhvačam uvjete poslovanja mora biti označeno!
+      </div>
+      <div class="checkbox" >
+        <input name="checkbox1" type="checkbox" id="checkbox" name="uvjeti" required/>
+        <label for="checkbox">Prihvačam uvjete poslovanja</label>
+      </div>
+      <button
+        id="registerBtn"
+        name="button1"
+        class="form__button"
+        type="submit"
+      >
+        REGISTRIRAJTE SE
+      </button>
+    </form>
+  </div>
+  <script src="./main.js"></script>
+</body>
